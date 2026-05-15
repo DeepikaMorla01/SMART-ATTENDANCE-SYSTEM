@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Dashboard</h2>
+
+<div class="dashboard-container">
+    <div class="dashboard-stats">
+        <div><strong>Total:</strong> {{ total }}</div>
+        <div><strong>Present:</strong> {{ present }}</div>
+        <div><strong>Absent:</strong> {{ absent }}</div>
+    </div>
+
+    <!-- Attendance chart -->
+    <div class="chart-container">
+        <canvas id="attendanceChart"></canvas>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const presentCount = {{ present|tojson }};
+    const absentCount = {{ absent|tojson }};
+
+    const ctx = document.getElementById('attendanceChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Present', 'Absent'],
+            datasets: [{
+                label: 'Attendance',
+                data: [presentCount, absentCount],
+                backgroundColor: ['#28a745', '#dc3545']
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: { y: { beginAtZero: true, ticks: { precision: 0 } } }
+        }
+    });
+});
+</script>
+{% endblock %}

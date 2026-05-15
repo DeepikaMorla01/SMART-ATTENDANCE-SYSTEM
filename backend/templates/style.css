@@ -1,0 +1,232 @@
+/* ---------- Global Styles ---------- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    align-content: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+/* ---------- Navbar ---------- */
+header {
+    background-color: #4ca3b1;
+    padding: 12px 0;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-buttons a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-buttons a:hover {
+    background-color: #ccaa9b;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    text-align: center;
+    padding: 12px;
+    background-color: #4ca3b1;
+    color: white;
+    margin-top: 30px;
+}
+
+/* ---------- Buttons ---------- */
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-green { background-color: #28a745; color: #fff; }
+.btn-green:hover { background-color: #218838; }
+
+.btn-blue { background-color: #007BFF; color: #fff; }
+.btn-blue:hover { background-color: #0056b3; }
+
+.btn-red { background-color: #dc3545; color: #fff; }
+.btn-red:hover { background-color: #c82333; }
+
+/* ---------- Tables ---------- */
+.students-table, #attendanceTable {
+    width: 100%;
+    border: 2px solid black;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.students-table th, .students-table td,
+#attendanceTable th, #attendanceTable td {
+    border: 2px solid #000;
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.students-table th, #attendanceTable th {
+    background-color: #5d94b0;
+    color: #fff;
+    font-weight: bold;
+}
+
+.students-table tbody tr:nth-child(even) td,
+#attendanceTable tbody tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+.students-table tbody tr:hover td,
+#attendanceTable tbody tr:hover td {
+    background-color: #f1f1f1;
+}
+
+/* Student Photos */
+.students-table img {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+/* Status Colors */
+.students-table td.present,
+#attendanceTable td.present {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.students-table td.absent,
+#attendanceTable td.absent {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* ---------- Forms ---------- */
+form {
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+input[type="file"] {
+    padding: 6px;
+    margin-right: 8px;
+}
+
+/* ---------- Attendance Stats / Dashboard ---------- */
+.attendance-stats, .dashboard-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 18px 0;
+    font-weight: 600;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chart-container {
+    width: 90%;
+    max-width: 450px;
+    height: 220px;
+    margin-top: 20px;
+}
+
+/* ---------- Home Banner ---------- */
+.home-banner {
+    text-align: center;
+    background-color: #5d94b0;
+    color: #fff;
+    padding: 60px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.home-banner h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.home-banner p {
+    font-size: 18px;
+}
+/* Button style */
+button, .btn-blue {
+  background-color: #bcc8d4;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Table style */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  text-align: center;
+  padding: 8px;
+}
+
+.present {
+  color: green;
+  font-weight: bold;
+}
+
+.absent {
+  color: red;
+  font-weight: bold;
+}

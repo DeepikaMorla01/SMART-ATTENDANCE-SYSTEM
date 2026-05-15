@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Attendance</h2>
+
+<form id="uploadForm" enctype="multipart/form-data">
+    <input type="file" id="classroomImage" name="classroomImage" accept="image/*">
+    <button type="submit" id="markAttendanceBtn" disabled>Mark Attendance</button>
+</form>
+
+<div class="attendance-stats">
+    <span>Total: <span id="total">0</span></span>
+    <span>Present: <span id="present">0</span></span>
+    <span>Absent: <span id="absent">0</span></span>
+</div>
+
+<table id="attendanceTable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Roll No</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Rows added dynamically -->
+    </tbody>
+</table>
+
+<a id="downloadBtn" href="#" style="display:none;">Download Excel</a>
+
+<script src="{{ url_for('custom_static', filename='js/script.js') }}"></script>
+{% endblock %}

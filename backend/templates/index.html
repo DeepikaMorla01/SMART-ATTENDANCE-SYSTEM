@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Smart Attendance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Attendance System</h1>
+
+        <form id="uploadForm">
+            <input type="file" id="classroomImage" name="classroomImage" accept="image/*" required>
+            <button type="submit" id="markAttendanceBtn" disabled>Mark Attendance</button>
+            <!-- Manual download if needed -->
+            <a id="downloadBtn" href="#" style="display:none;">Download Excel</a>
+        </form>
+
+        <div id="summary">
+            <div>Total Students: <span id="total">0</span></div>
+            <div>Present: <span id="present">0</span></div>
+            <div>Absent: <span id="absent">0</span></div>
+        </div>
+
+        <table id="attendanceTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Roll No</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- rows injected here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
